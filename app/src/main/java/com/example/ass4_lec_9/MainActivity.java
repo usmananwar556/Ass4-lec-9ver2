@@ -1,22 +1,28 @@
 package com.example.ass4_lec_9;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ProgressBar;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    ProgressBar progressBar;
+    ProgressDialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.progess);
-        progressBar.setVisibility(View.VISIBLE);
+        Object context;
+        dialog = new progressDialog(context:this)
     }
     public void SHOW(View V){
-        progressBar.setVisibility(View.GONE);
+       dialog.setTitle("My Progress");
+       dialog.setMessage("Please wait.....");
+       dialog.setIcon(R.drawable.ic_launcher_background);
+       dialog.setCancelable(false);
+       dialog.show();
+       //dialog.dismiss();
 
     }
 }

@@ -8,11 +8,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <ProgressBar
-        android:id="@+id/progess"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:visibility="visible" />
+
 
     <Button
         android:text="@string/stop"
